@@ -200,20 +200,44 @@
     }
     @media screen and (max-width: 480px){
         .container{
-            
-        }
+            .banner{
+                .banner_img{
+                    width: 200px;
+                    height: 130px;
+                    img{
+                        max-height: 100%;
+                        max-width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-7%,-13%);
+                    }
+                }
+            }
+            .information{
+                ul>li{
+                    padding-left: 55px;
+                    display: inline-block;
+                    width: 50%;
+                    margin-bottom: 10px;
+                }
+            }       
     }
+}
     @media screen and (max-width: 600px){
         .container{
             .information{
             ul>li{
                 padding-left: 50px;
-            }
+                font-size: 0.8em;
+                }
             }
         }
     }
     @media screen and (max-width: 840px){  
         .container{
-            padding: 0 20px;
+            .information,.banner_description{
+                 padding: 0 20px;
+            }
+           
         }
     }
