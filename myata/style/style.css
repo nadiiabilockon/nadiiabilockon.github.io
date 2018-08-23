@@ -242,7 +242,6 @@ form {
     left: 100%;
     background:#2ecc71;
     border:none;
-    width: 263px;
  }
  .carousel-indicators{
     bottom: 0;
@@ -253,9 +252,6 @@ form {
  }
  .sidebar-offcanvas .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
     background:#27ae60;
- }
-  .dropdown-menu>li>a{
-    white-space: normal;
  }
  .slider_text{
     position: absolute;
@@ -597,7 +593,7 @@ height: 190px;
     padding-top: 5px;
     text-align: center;
     position: fixed;    
-    bottom: 260px;
+    bottom: 190px;
     right: 30px;
     width: 36px;
     height: 36px;
@@ -617,6 +613,12 @@ height: 190px;
 
 
 @media screen and (max-width:  1170px) {
+    body{
+        font-size: 15px;
+    }
+    .sidebar-offcanvas .nav > li > a{
+        padding: 0;
+    }
     .navbar-header {
         float: none;
         text-align: center;
