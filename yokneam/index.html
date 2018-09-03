@@ -468,6 +468,28 @@
         </div>
         <i class="fas fa-chevron-circle-up" id="scroller"></i>
         <script>
+            $(document).ready(function () {
+                $('#scroller').fadeOut();
+                //fade in/out based on scrollTop value
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#scroller').fadeIn();
+                    } else {
+                        $('#scroller').fadeOut();
+                    }
+                });
+
+                // scroll body to 0px on click
+                $('#scroller').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 400);
+                    return false;
+                });
+            });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>
             $('#datepicker').datepicker({
                 uiLibrary: 'bootstrap4'
             });
@@ -614,30 +636,7 @@
 
             }    
         </script>
-        <script>
-            $(document).ready(function () {
-                $('#scroller').fadeOut();
-                //fade in/out based on scrollTop value
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) {
-                        $('#scroller').fadeIn();
-                    } else {
-                        $('#scroller').fadeOut();
-                    }
-                });
-
-                // scroll body to 0px on click
-                $('#scroller').click(function () {
-                    $('body,html').animate({
-                        scrollTop: 0
-                    }, 400);
-                    return false;
-                });
-            });
-        </script> 
-        
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqmo2TC5Qrfk_Fuy_hoquW9Wh6YN69A0&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqmo2TC5Qrfk_Fuy_hoquW9Wh6YN69A0&callback=initMap"></script>
     </body>
 
 </html>
