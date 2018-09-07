@@ -15,11 +15,11 @@ pipeUp.src = "img/flappy_bird_pipeUp.png";
 pipeBottom.src = "img/flappy_bird_pipeBottom.png";
 
 // Звуковые файлы
-var fly = new Audio(); 
-var score_audio = new Audio(); 
+var fly = new Audio();
+var score_audio = new Audio();
 
-fly.src = "audio/fly.mp3"; 
-score_audio.src = "audio/score.mp3"; 
+fly.src = "audio/fly.mp3";
+score_audio.src = "audio/score.mp3";
 
 var gap = 90;
 
@@ -27,8 +27,8 @@ var gap = 90;
 
 document.addEventListener("keydown", moveUp)
 
-function moveUp(){
-    yPos -=25;
+function moveUp() {
+    yPos -= 25;
     fly.play();
 }
 // Создание блоков
@@ -48,29 +48,31 @@ var grav = 1.5;
 
 
 
-function draw(){
+function draw() {
     ctx.drawImage(bg, 0, 0);
 
-    for(var i = 0;  i < pipe.length; i++){
+    for (var i = 0; i < pipe.length; i++) {
         ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
         ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
 
         pipe[i].x--;
 
-        if(pipe[i].x == 125) {
+        if (pipe[i].x == 125) {
             pipe.push({
-            x : cvs.width,
-            y : Math.floor(Math.random() * pipeUp.height) - pipeUp.height
+                x: cvs.width,
+                y: Math.floor(Math.random() * pipeUp.height) - pipeUp.height
             });
         }
-         // Отслеживание прикосновений
-         if(xPos + bird.width >= pipe[i].x
+
+        // Отслеживание прикосновений
+        if (xPos + bird.width >= pipe[i].x
             && xPos <= pipe[i].x + pipeUp.width
             && (yPos <= pipe[i].y + pipeUp.height
-            || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
+                || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
             location.reload(); // Перезагрузка страницы
         }
-        if(pipe[i].x == 5){
+
+        if (pipe[i].x == 5) {
             score++;
             score_audio.play();
         }
@@ -81,9 +83,9 @@ function draw(){
 
     yPos += grav;
 
-    ctx.fillStyle ="#fff";
+    ctx.fillStyle = "#fff";
     ctx.font = "30px Verdana";
-    ctx.fillText("Счёт:"+ score, 10, cvs.height - 20);
+    ctx.fillText("Счёт:" + score, 10, cvs.height - 20);
 
     requestAnimationFrame(draw);
 }
