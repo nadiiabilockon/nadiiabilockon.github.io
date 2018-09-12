@@ -1,0 +1,46 @@
+window.onload = function(){
+  
+    var game = document.getElementById('game');
+    for (var i = 0; i < 9; i++){
+      game.innerHTML += '<div class="block space"></div>';
+    }
+    
+    var count = 0;
+    game.onclick = function(e){
+      console.log(e);
+      var symbol = '0';
+      if (e.target.className === 'block space') {
+        if (count % 2 === 0)
+          symbol = '0';
+        else 
+          symbol = 'X';
+        
+        e.target.innerHTML = symbol;
+        e.target.className = 'block';
+        count++;
+        if (count > 4)
+          checkWin(symbol);
+      }
+    }
+    
+    function checkWin(s){
+      console.log(s);
+      
+      var allblockk = document.getElementsByClassName('block');
+          console.log(allblockk);
+      for (var i = 0; i < 9; i = i+3) {
+        if (allblockk[i].innerHTML === s && allblockk[i+1].innerHTML === s && allblockk[i+2].innerHTML === s)
+          alert('Winner "'+s+'"');
+      }
+      
+      for (i = 0; i < 3; i++) {
+        if (allblockk[i].innerHTML === s && allblockk[i+3].innerHTML === s && allblockk[i+6].innerHTML === s)
+          alert('Winner "'+s+'"');
+      }
+      
+      if (allblockk[0].innerHTML === s && allblockk[4].innerHTML === s && allblockk[8].innerHTML === s)
+          alert('Winner "'+s+'"');
+      if (allblockk[2].innerHTML === s && allblockk[4].innerHTML === s && allblockk[6].innerHTML === s)
+          alert('Winner "'+s+'"');
+    }
+  }
