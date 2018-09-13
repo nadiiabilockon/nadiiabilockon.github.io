@@ -30,9 +30,6 @@ window.onload = function () {
         if (allblock[id].innerText == "") {
             allblock[id].innerHTML = "0";
         }
-        else {
-            aiClick();
-        }
         hod++;
 
     }
