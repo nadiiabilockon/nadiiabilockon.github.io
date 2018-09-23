@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900,900i|Source+Sans+Pro:400,700');
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+nav{
+  color: #506a85;
+  font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar-nav>li>a {
+    line-height: 40px;
+    padding: 17px 0px 15px 41px;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+    background: transparent;
+}
+.navbar-toggle{
+    border: 1px solid  #506a85;
+}
+.navbar-toggle .icon-bar{
+    background: #506a85;
+}
+.container-fluid{
+    padding: 0;
+}
+#myCarousel{
+    color: #a3b1bf;
+    font-size: 24px;
+    font-weight: 400;
+}
+.carousel-inner > .item > img {
+    width:100%;
+    height:880px;
+    object-fit: cover;   
+    z-index: -1;
+  }
+.item::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    background: rgba(80, 106, 133, 0.603) ;
+    z-index: 1;
+}
+.carousel-caption{
+    top:243px;
+    left: 15%;
+    right: 15%;
+}
+.carousel-indicators{
+    bottom: -10px;
+    width: 150px;
+    background: #fff;
+    border-radius: 3px;
+    margin-left: -75px;
+}
+.carousel-indicators li{
+    padding: 10px;
+    background: #506a85;
+    line-height: inherit;
+    border:none;
+}
+.carousel-indicators .active{
+    background: #00bc9c;
+}
+#myCarousel .item h3{
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 78px;
+    font-weight: 900;
+    letter-spacing: 4.68px;
+    line-height: 88px;
+    text-transform: uppercase;
+    animation: font 1s ease-in-out;
+}
+#myCarousel .item p{
+    animation: font 2s ease-in-out;
+}
+.btn-success{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    background-image:none;
+    padding: 22px 70px;
+    background-color: #00bc9c;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 52px;
+    animation: font 1s ease-in-out;
+}
+.btn-success:focus, .btn-success:hover{
+    color: #00bc9c;
+    background: #ffffff;
+}
+.carousel-control.left, .carousel-control.right{
+    background-image: none;
+    z-index: 5;
+}
+.about .row div{
+    font-size: 16px;
+    font-weight: 400;
+    color: #73879c;
+    letter-spacing: 0.16px;
+    line-height: 25px;
+}
+.about{
+    margin: 20px 0 47px;
+}
+.about h3{
+    color: #506a85;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.52px;
+    line-height: 34px;
+}
+.about i{
+    margin-top: 20px;
+    font-size: 60px;
+    color:#00bc9c;
+}
+@keyframes font{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px){    
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav>li>a {
+        line-height: 10px;
+    }
+    .carousel-caption {
+        top:10%;
+    }
+    #myCarousel .item h3 {
+        font-size: 56px;
+        letter-spacing: 2.68px;
+        line-height: 65px;
+    }
+    .btn-success{
+        padding: 20px 25px;
+    }
+
+}
