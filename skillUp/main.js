@@ -13,3 +13,4 @@ var b = +prompt("Please enter the number b","");
 var result = (a === b) ? alert("a and b are equal") : (a > b) ? alert("a is greater") : alert("b is greater");
 
 //third task in index.html
+
