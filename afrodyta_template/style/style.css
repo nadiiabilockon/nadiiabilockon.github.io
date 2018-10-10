@@ -100,6 +100,7 @@ h3{
 }
 .main_item{
     margin-top: 59px;
+    overflow: hidden;
 }
 .thin_text{
     font-size: 40px;
@@ -171,6 +172,7 @@ h3{
     font-weight: 700;
     line-height: 70px;
     text-transform: uppercase;
+    word-break: break-word;
 }
 .btn{
     margin-top: 8px;
@@ -227,6 +229,7 @@ h3{
 }
 article{
     margin-top: 134px;
+    overflow: hidden;
 }
 article .thin_text{
     line-height: 30px;
