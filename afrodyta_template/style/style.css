@@ -5,7 +5,7 @@ a{
 }
 a:hover{
     color:inherit;
-    text-shadow: 0 0 20px rgba(48, 48, 48, 0.7);
+    text-shadow: 0 0 5px rgba(48, 48, 48, 0.7);
     text-decoration: none;
 }
 body{
@@ -40,6 +40,7 @@ header{
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
     color: inherit;
     border-bottom: 5px solid black;
+    text-shadow:none;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0;
