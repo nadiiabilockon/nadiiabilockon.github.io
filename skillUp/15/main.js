@@ -46,19 +46,9 @@ function checkDate() {
   
   //4   
   
-  var input = document.querySelector(".name");
-  var input_2 = document.querySelector(".name_2");
-
-  input.addEventListener("input", function() {
-    this.value = this.value[0].toUpperCase() + this.value.slice(1);
-  })
-  input_2.addEventListener("input", function() {
-    this.value = this.value[0].toUpperCase() + this.value.slice(1);
-  })
-
   var email = document.getElementById("mail");
 
-email.addEventListener("input", function (event) {
+  email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
     email.setCustomValidity("Email address entered is not valid");
   } else {

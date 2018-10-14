@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Java Script</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -48,11 +48,11 @@
                 <label>Name</label>
                 <br>
                 <div class="name_input">
-                    <input class="name" type="text" name="first" required />
+                    <input pattern="[A-Z-А-Я][a-z-а-я]{1,32}" class="name" type="text" name="first" required />
                     <p>First</p>
                 </div>
                 <div class="name_input">
-                    <input class="name_2" type="text" name="last" required/>
+                    <input pattern="[A-Z-А-Я][a-z-а-я]{1,32}" class="name_2" type="text" name="last" required/>
                     <p>Last</p>
                 </div>
             </div>
@@ -67,10 +67,10 @@
             </div>
             <div class="result_date">
                 <button id='validate' />Submit</button>
-            </p>
+                </p>
         </form>
-    </div>
-    <script src="main.js"></script>
+        </div>
+        <script src="main.js"></script>
 </body>
 
 </html>
