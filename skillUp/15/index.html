@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>1. Exercise</h2>
+        <p id="str">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque voluptatem iste dicta voluptates et nisi explicabo.
+            Maxime nobis at ad aspernatur quos dolorem. Quo, eaque cumque. Ea, ut id.
+        </p>
+        <h2>2. Exercise</h2>
+        <p id="str_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Suscipit ullam quos officiis eius nostrum explicabo minus aspernatur mollitia excepturi earum! Placeat perferendis
+            libero delectus voluptas ab ad deleniti eligendi debitis.</p>
+        <p id="result">
+        </p>
+        <h2>3. Exercise</h2>
+        <h2 class="form_valid">Form</h2>
+        <form id="date-form">
+            <div class="form-field">
+                <label for="date1">From Date</label>
+                <br>
+                <input id="date1" type="date" class="form-control" name="start-date" data-date-format="dd/mm/yyyy" />
+                <p>dd/mm/yyyy</p>
+            </div>
+            <div class="form-field">
+                <label>To Date</label>
+                <br>
+                <input id="date2" type="date" class="form-control" name="end-date" data-date-format="dd/mm/yyyy" />
+                <p>dd/mm/yyyy</p>
+            </div>
+            <div class="result_date">
+                <button type="button" value="Check" onClick="checkDate()" />Submit</button>
+                <p id="diff">0 Days</p>
+            </div>
+        </form>
+        <h2>4. Exercise</h2>
+        <h2 class="form_valid">Form</h2>
+        <form action="#">
+            <div>
+                <label>Name</label>
+                <br>
+                <div class="name_input">
+                    <input class="name" type="text" name="first" required />
+                    <p>First</p>
+                </div>
+                <div class="name_input">
+                    <input class="name_2" type="text" name="last" required/>
+                    <p>Last</p>
+                </div>
+            </div>
+            <div class="email_zip">
+                <label>Email</label>
+                <br>
+                <input type="email" name="email" id='mail' required />
+                <br>
+                <label>Zip</label>
+                <br>
+                <input type="text" pattern="[\d]{5}" maxlength="5" required />
+            </div>
+            <div class="result_date">
+                <button id='validate' />Submit</button>
+            </p>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

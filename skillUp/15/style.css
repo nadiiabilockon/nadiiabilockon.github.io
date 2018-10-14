@@ -1,0 +1,85 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: #454849;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-field {
+    margin: 20px 0;
+    color: #6a808b;
+}
+
+::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url(https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid #6a808b;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+input:focus::-webkit-datetime-edit {
+    color: #454849;
+}
+
+label {
+    line-height: 20px;
+    font-weight: bold;
+    color: #454849;
+}
+
+button {
+    color: #fff;
+    background-color: #007bff;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.result_date {
+    text-align: center;
+}
+
+.name_input {
+    display: inline-block;
+}
+
+.name_input input {
+    margin-top: 20px;
+    width: 300px;
+}
+
+.email_zip input {
+    width: 450px;
+    margin: 20px 0;
+}
+
+.form_valid {
+    background: #454849;
+    color: #fff;
+    padding: 10px;
+}
+
+.name_input:last-child {
+    margin-left: 100px;
+}
+
+.name_input p {
+    margin-top: 5px;
+    color: #6a808b;
+    font-size: 0.9em;
+}
