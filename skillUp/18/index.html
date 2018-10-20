@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>1. Exercise</h2>
+        <h2 class="form_valid">Form</h2>
+        <form action="#">
+            <div>
+                <label>Name</label>
+                <br>
+                <div class="name_input">
+                    <input pattern="[A-Z-А-Я][a-z-а-я]{1,32}" class="name" type="text" name="first" required />
+                    <p>First</p>
+                </div>
+                <div class="name_input">
+                    <input pattern="[A-Z-А-Я][a-z-а-я]{1,32}" class="name_2" type="text" name="last" required/>
+                    <p>Last</p>
+                </div>
+            </div>
+            <div class="email_zip">
+                <label>Email</label>
+                <br>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" id='mail' required />
+                <br>
+                <label>Zip</label>
+                <br>
+                <input type="text" pattern="[\d]{5}" maxlength="5" id='zip' required />
+            </div>
+            <div class="result_date">
+                <button id='validate' />Submit</button>
+                </p>
+        </form>
+        <h2>2. Exercise</h2>
+        <p class="ex_2"></p>
+        <h2>3. Exercise</h2>
+        <p class="worker_1"></p>
+        <p class="worker_2"></p>
+        </div>
+        <h2>4. Exercise</h2>
+        <div class="test"></div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+        <script src="main.js"></script>
+</body>
+
+</html>
