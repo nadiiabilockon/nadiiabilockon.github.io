@@ -70,33 +70,48 @@ w_res_2.innerHTML = JSON.stringify(worker_2) + "<br>" + "<br>" + "Salary is" + "
 
 // 4
 
-var shift = 0;
-var test = document.querySelector('.test');
-var start = document.querySelector('#start');
-var stop = document.querySelector('#stop');
-var reset = document.querySelector('#reset');
-var start_shift;
-var timer;
+var secondsLabel = document.getElementById('seconds'), minutesLabel = document.getElementById('minutes'), hoursLabel = document
+    .getElementById('hours'), totalSeconds = 0, startButton = document.getElementById('start'), stopButton = document.getElementById('stop'), resetButton = document
+    .getElementById('reset'), timer = null;
 
-function  Timer(){
-    start_shift = function () {
-        test.style.marginLeft = shift + "px";
-        shift+=5;
-    };
+function MyTimer() {};
+
+ MyTimer.prototype.start = () =>{
+   if (!timer) {
+        timer = setInterval(setTime, 1000);
+    }
 }
-Timer.prototype.start = () =>{
-    timer = setInterval(start_shift,50);
+MyTimer.prototype.stop = () => {
+    if (timer) {
+        clearInterval(timer);
+        timer = null;
+    }
 }
-Timer.prototype.stop = () =>{
-    timer = clearInterval(timer);
+MyTimer.prototype.reset = () => {
+    if (timer) {
+        totalSeconds = 0;
+    }
 }
-Timer.prototype.reset = () =>{
-    test.style.marginLeft = 0 + "px";
-}    
 
-var timer_one = new Timer();
+function setTime() {
+    totalSeconds++;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60))+ " " + ":";
+    hoursLabel.innerHTML = pad(parseInt(totalSeconds / 3600))+ " " + ":" ;
+}
 
-start.onclick = () => timer_one.start();
-stop.onclick = () => timer_one.stop();
-reset.onclick = () => timer_one.reset();
+function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString;
+    } else {
+        return valString;
+    }
+}
 
+var timer_one = new MyTimer();
+
+startButton.onclick = () => timer_one.start();
+stopButton.onclick = () => timer_one.stop();
+resetButton.onclick = () => timer_one.reset();
+  
