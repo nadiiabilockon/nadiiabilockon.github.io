@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        .input-group>.input-group-prepend:not(:first-child)>.btn {
+            border-top-right-radius: .25rem;
+            border-bottom-right-radius: .25rem;
+        }
+
+        .dropdown {
+            margin-top: 50px;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .dropdown-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="input-g">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary remove" type="button">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="add" type="submit" class="btn btn-outline-secondary">Add</button>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-3">
+                <div class="inp_form">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-between">
+                        <button id="inp_form_add" type="submit" class="btn btn-primary">Add</button>
+                        <button id="inp_form_rem" type="submit" class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2">
+                    Default
+                </button>
+                <div class="dropdown-menu" href="#">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
