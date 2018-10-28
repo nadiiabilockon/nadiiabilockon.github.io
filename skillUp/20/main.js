@@ -1,7 +1,7 @@
 let myNodeList = document.querySelectorAll('.line');
 let result = document.querySelector('.total'); 
 
-NodeList.prototype.addEventListener = function (event_name, callback, useCapture){
+NodeList.prototype.customEventListener = function (event_name, callback, useCapture){
     for (let i = 0; i < this.length; i++){
       this[i].addEventListener(event_name, callback, useCapture);
     }
@@ -12,7 +12,7 @@ function keyIsAvalible() {
     event.returnValue = false;    
 }
 
-myNodeList.addEventListener('input', function(e) {
+myNodeList.customEventListener('input', function(e) {
     let sum = 0;
 
     for(let i = 0; i < myNodeList.length; i++){
