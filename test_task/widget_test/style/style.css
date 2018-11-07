@@ -75,7 +75,6 @@ table{
     border-collapse: collapse;
     min-width: 500px;
     max-width: 500px;
-    margin:0 15px;
     text-transform: capitalize;
 }
 #collapse{
@@ -115,7 +114,7 @@ tfoot,thead{
     padding: 0 5px; 
 }
 #add_btn i{
-    padding-top: 2px; 
+    padding-top: 2.5px; 
 }
 label{
     padding: 0 5px; 
@@ -131,7 +130,6 @@ input{
 
 @media (max-width: 576px){
     .container {
-        display: block;
+        display: table;
     }
-
 }
