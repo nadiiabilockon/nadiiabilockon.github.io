@@ -1,0 +1,137 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ /* style */
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+}
+table, th, td{
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+}
+table{  
+    border-collapse: collapse;
+    min-width: 500px;
+    max-width: 500px;
+    margin:0 15px;
+    text-transform: capitalize;
+}
+#collapse{
+    display: none;
+}
+#collapse.active{
+    display: block;
+}
+tfoot,thead{
+    background:  repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgb(230, 230, 230) 10px,
+        rgb(248, 248, 248) 20px
+      );
+}
+.template{
+    display: none;
+}
+.row_table{
+    display: flex;
+    justify-content: space-between;
+}
+#title input{
+    border: none;
+}
+
+#title input, .row_table{
+    font-weight: bold;
+    font-size: 20px;
+}
+#add_btn{
+    display: inline-block;
+    background: white;
+    margin: 0 10px;
+    padding: 0 5px; 
+}
+#add_btn i{
+    padding-top: 2px; 
+}
+label{
+    padding: 0 5px; 
+}
+input{
+    height: 20px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: capitalize;
+}
+#error{
+    padding: 15px;
+}
+
+@media (max-width: 576px){
+    .container {
+        display: block;
+    }
+
+}

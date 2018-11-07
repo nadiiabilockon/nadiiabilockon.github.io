@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Widget</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <table>
+                <tr>
+                    <td id="title">
+                        <div class="row_table">
+                            <input type="text" value="Expenses">
+                            <a class="collapse_icon" href="#">
+                                <i class="fas fa-caret-square-up"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="collapse" class="active">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name
+                                <a class="sort_btn" href="#">
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                            </th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_main"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <input class="name" type="text">
+                            </td>
+                            <td>
+                                <div class="row_table">
+                                    <label>$ </label>
+                                    <input class="amount" type="text" onkeypress="keyIsAvalible()">
+                                    <a id="add_btn" href="#">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="row_table">
+                                <span>Total</span>
+                                <span class="total_price"> $ 0</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="template">
+                    <tr class="line_new">
+                        <td class="name_value">
+                        </td>
+                        <td class="amount_value">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p id="error"></p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
